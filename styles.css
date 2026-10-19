@@ -1,0 +1,128 @@
+:root {
+  --tinta: #10151c;
+  --texto: #26303c;
+  --suave: #5b6878;
+  --linea: #dfe4ea;
+  --fondo: #f6f7f9;
+  --papel: #ffffff;
+  --acento: #0b5fff;
+  --rojo: #b3121b;
+  --naranja: #a85400;
+  --amarillo: #7a5b00;
+  --verde: #146c2e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a { color: var(--acento); }
+
+.cabecera, main, footer { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+.cabecera { padding-top: 40px; }
+.marca { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--suave); margin: 0 0 12px; }
+.marca a { color: var(--suave); text-decoration: none; font-weight: 600; }
+
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 14px; color: var(--tinta); letter-spacing: -.02em; }
+.entradilla { font-size: 18px; color: var(--suave); margin: 0 0 28px; }
+
+.aviso {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  padding: 18px 20px;
+  background: #fff8e6;
+  border-left: 4px solid #d99b00;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #4a3a00;
+}
+
+.panel {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0 0 24px;
+}
+
+h2 { font-size: 21px; margin: 0 0 18px; color: var(--tinta); }
+h3 { font-size: 16px; margin: 20px 0 8px; color: var(--tinta); }
+
+.campo { margin: 0 0 20px; border: 0; padding: 0; }
+.campo:last-of-type { margin-bottom: 14px; }
+label, legend { display: block; font-weight: 600; font-size: 14px; color: var(--tinta); margin-bottom: 8px; }
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #c3ccd6;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--texto);
+}
+
+.opcion { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 15px; margin: 0 0 8px; cursor: pointer; }
+.opcion input { margin-top: 5px; }
+
+button {
+  font: inherit;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 6px;
+  border: 1px solid var(--acento);
+  background: var(--acento);
+  color: #fff;
+  cursor: pointer;
+}
+button:hover { filter: brightness(.92); }
+#copiar { background: #fff; color: var(--acento); }
+
+.sello { display: inline-block; font-weight: 700; font-size: 15px; padding: 6px 12px; border-radius: 999px; margin: 0 0 14px; }
+.sello.rojo { background: #fdecec; color: var(--rojo); }
+.sello.naranja { background: #fdf1e3; color: var(--naranja); }
+.sello.amarillo { background: #fdf8e0; color: var(--amarillo); }
+.sello.verde { background: #e9f6ec; color: var(--verde); }
+
+.caso, .fecha, .roles, .base { margin: 0 0 6px; font-size: 15px; }
+.base { color: var(--suave); font-size: 14px; }
+.resumen { margin: 10px 0 12px; font-size: 16px; }
+.nota { color: var(--suave); font-size: 13px; }
+.aviso-inline { margin: 10px 0; padding: 10px 12px; background: #eef3ff; border-radius: 4px; font-size: 14px; }
+.multa { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--linea); font-size: 15px; }
+
+ol { margin: 0; padding-left: 22px; }
+ol li { margin-bottom: 7px; font-size: 15px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--linea); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--suave); }
+.estado { font-size: 12px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: #eef1f5; color: var(--suave); }
+.estado.vigente { background: #e9f6ec; color: var(--verde); }
+.estado.aplazado { background: #fdf1e3; color: var(--naranja); }
+.estado.proximo { background: #fdf8e0; color: var(--amarillo); }
+
+.mito { padding: 12px 0; border-bottom: 1px solid var(--linea); }
+.mito:last-child { border-bottom: 0; }
+.falso { margin: 0 0 6px; font-weight: 600; color: var(--rojo); }
+.cierto { margin: 0; font-size: 15px; }
+
+.enlaces { list-style: none; padding: 0; margin: 12px 0 0; font-size: 15px; }
+.enlaces li { margin-bottom: 6px; }
+
+.acciones { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+.ok { color: var(--verde); font-size: 14px; font-weight: 600; }
+
+footer { padding: 8px 20px 48px; color: var(--suave); font-size: 13px; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 27px; }
+  .panel { padding: 18px; }
+  table { font-size: 13px; }
+}

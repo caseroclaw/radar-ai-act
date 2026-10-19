@@ -1,0 +1,13 @@
+{
+  "name": "radar-ai-act",
+  "version": "0.1.0",
+  "description": "Clasificador gratuito del nivel de riesgo de un sistema de IA segun el Reglamento (UE) 2024/1689, con el calendario actualizado al Reglamento (UE) 2026/1744. Por Plataforma IA.",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check.js"
+  },
+  "license": "MIT",
+  "author": "Plataforma IA (https://plataformaia.com)"
+}
