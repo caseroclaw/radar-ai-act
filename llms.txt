@@ -1,0 +1,45 @@
+# Radar AI Act
+
+> Clasificador gratuito del nivel de riesgo de un sistema de IA según el Reglamento europeo de IA (Reglamento (UE) 2024/1689), con el calendario de obligaciones actualizado tras el Reglamento (UE) 2026/1744. Herramienta de Plataforma IA, consultora de automatización con IA para pymes en Madrid (España). Se ejecuta entera en el navegador: sin registro, sin cookies y sin enviar datos.
+
+## Qué resuelve
+
+Responde en 30 segundos a la pregunta que se hacen las pymes españolas: «¿el sistema de IA que quiero usar o vender es legalmente de alto riesgo?». Devuelve el nivel, las obligaciones que aplican a cada rol y desde qué fecha son exigibles.
+
+## Niveles que distingue
+
+- **Práctica prohibida** (art. 5): puntuación social, manipulación subliminal, explotación de vulnerabilidades, identificación biométrica remota en espacios públicos para seguridad, inferencia de emociones en trabajo y educación, categorización biométrica sensible y scraping de imágenes para bases de reconocimiento facial.
+- **Alto riesgo del Anexo III**: empleo y selección de personal, acceso a crédito y seguros, servicios públicos esenciales y prestaciones, educación y evaluación, biometría, infraestructuras críticas, justicia, policía y migración.
+- **Alto riesgo del Anexo I**: IA integrada en productos sujetos a evaluación de conformidad (maquinaria, dispositivos médicos, vehículos, juguetes).
+- **Riesgo limitado (art. 50)**: chatbots, voz sintética, deepfakes y contenido generado: obligación de transparencia, no de conformidad.
+- **Riesgo mínimo**: el resto, sin obligaciones específicas.
+
+## Fechas de exigibilidad (calendario vigente)
+
+- **2 de agosto de 2026**: artículo 50 (transparencia) y obligaciones de alfabetización del artículo 4.
+- **2 de diciembre de 2027**: alto riesgo del Anexo III. Antes era el 2 de agosto de 2026; el Reglamento (UE) 2026/1744, en vigor desde el 27 de julio de 2026, lo aplazó.
+- **2 de agosto de 2028**: alto riesgo del Anexo I. Antes era el 2 de agosto de 2027.
+
+## Sanciones (art. 99)
+
+- Hasta **35 M € o el 7 % del volumen de negocio mundial** para prácticas prohibidas.
+- Hasta **15 M € o el 3 %** para incumplimientos de obligaciones de alto riesgo.
+- Hasta **7,5 M € o el 1 %** por información incorrecta a las autoridades.
+- El artículo 4 (alfabetización) **no** está en la lista tasada del art. 99.4: no tiene ese techo.
+- Para pymes y startups, el art. 99.6 limita la sanción al porcentaje de facturación, no a la cifra absoluta.
+
+## Diferencias por rol
+
+El clasificador separa las obligaciones del **proveedor** (quien desarrolla o comercializa el sistema) de las del **responsable del despliegue** (la empresa que lo usa): evaluación de conformidad frente a evaluación de impacto, supervisión humana, registro de eventos y vigilancia poscomercial.
+
+## Límites honestos
+
+Es una orientación técnica, no un dictamen jurídico. Se apoya en el texto del reglamento y en el calendario publicado, y no cubre los códigos de buenas prácticas que aún se están redactando.
+
+## Enlaces
+
+- [Herramienta](https://caseroclaw.github.io/radar-ai-act/)
+- [Plataforma IA — consultoría de automatización con IA en Madrid](https://plataformaia.com/)
+- [Automatización de procesos con IA](https://plataformaia.com/es/automatizacion-ia)
+- [Transparencia del AI Act para pymes](https://plataformaia.com/es/blog/transparencia-ai-act-pymes)
+- [Código fuente (MIT)](https://github.com/caseroclaw/radar-ai-act)
