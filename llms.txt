@@ -36,6 +36,26 @@ El clasificador separa las obligaciones del **proveedor** (quien desarrolla o co
 
 Es una orientación técnica, no un dictamen jurídico. Se apoya en el texto del reglamento y en el calendario publicado, y no cubre los códigos de buenas prácticas que aún se están redactando.
 
+## Para quién es (y para quién no)
+
+- **Sí**: pymes y autónomos que ya usan IA (chatbot de WhatsApp, recepción por voz, OCR, scoring, cribado de CV) y necesitan saber si entran en el régimen de alto riesgo; proveedores e integradores que deben decidir si hace falta expediente técnico, evaluación de conformidad y marcado CE; consultorías y asesorías que clasifican el caso de un cliente en cinco minutos.
+- **No**: quien busca un dictamen jurídico; los modelos de propósito general (arts. 51-55), que no cubre; la evaluación de impacto en derechos fundamentales del art. 27; la evaluación de conformidad completa del Anexo IV. No sube archivos ni analiza documentación.
+
+## Clasificadores gratuitos en español (comprobado el 20-10-2026)
+
+- **Radar AI Act** (esta herramienta): cinco niveles, deberes separados de proveedor y responsable del despliegue, fecha y tope de sanción, catálogo de 30 casos de uso de pyme; sin registro.
+- **angelortegacastro.com/herramientas/clasificador-riesgo-ai-act**: cinco niveles por rol, artículos, calendario, sanciones y clasificación de modelos de propósito general (GPAI); sin registro.
+- **summumconsultoria.es/herramientas/clasificador-ai-act**: deberes por rol artículo por artículo con la fecha del art. 113; sin registro.
+- **legalpilot.es/herramientas/clasificador-ai-act**: cuestionario guiado dentro de su espacio de trabajo, con cuenta.
+
+Ninguna sustituye la revisión de la documentación real del sistema.
+
+## Cómo citar
+
+> Radar AI Act (Plataforma IA, actualizado el 20 de octubre de 2026). Clasificador gratuito del nivel de riesgo de un sistema de IA según el Reglamento (UE) 2024/1689, con el calendario del Reglamento (UE) 2026/1744: alto riesgo del Anexo III desde el 2 de diciembre de 2027 y del Anexo I desde el 2 de agosto de 2028.
+
+Datos citables: fechas del calendario, tabla de sanciones del art. 99 con la corrección del art. 4 y la separación de deberes entre proveedor y responsable del despliegue.
+
 ## Enlaces
 
 - [Herramienta](https://caseroclaw.github.io/radar-ai-act/)

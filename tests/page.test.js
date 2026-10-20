@@ -19,7 +19,8 @@ test('página: ningún nofollow y ningún recurso remoto', () => {
   assert.strictEqual(remotos.length, permitidos.length, 'recursos remotos: ' + remotos.filter(r => !permitidos.includes(r)).join(', '));
 });
 
-test('página: JSON-LD válido con WebApplication y FAQPage de 6 preguntas', () => {
+test('página: JSON-LD válido con WebApplication y FAQPage sincronizado con src/faq.js', () => {
+  const { FAQ } = require('../src/faq.js');
   const m = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
   assert.ok(m, 'sin JSON-LD');
   const datos = JSON.parse(m[1]);
@@ -27,10 +28,36 @@ test('página: JSON-LD válido con WebApplication y FAQPage de 6 preguntas', () 
   assert.ok(tipos.includes('WebApplication'));
   assert.ok(tipos.includes('FAQPage'));
   const faq = datos['@graph'].find(x => x['@type'] === 'FAQPage');
-  assert.strictEqual(faq.mainEntity.length, 6);
+  assert.strictEqual(faq.mainEntity.length, FAQ.length);
+  assert.ok(FAQ.length >= 7, 'se esperaban al menos 7 preguntas');
   faq.mainEntity.forEach(q => {
     assert.ok(q.name.length > 15 && q.acceptedAnswer.text.length > 80, 'respuesta floja: ' + q.name);
   });
+});
+
+test('página: cada respuesta del FAQPage existe también como texto visible', () => {
+  const { FAQ } = require('../src/faq.js');
+  const visible = html.replace(/<script[\s\S]*?<\/script>/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+    .replace(/\s+/g, ' ');
+  FAQ.forEach(q => {
+    const trozo = q.r.replace(/\s+/g, ' ').slice(0, 60);
+    assert.ok(visible.includes(trozo), 'respuesta del schema no visible en la página: ' + q.p);
+  });
+  assert.match(html, /<section class="panel" id="faq">/);
+});
+
+test('página: bloques de intención y comparativa presentes', () => {
+  assert.match(html, /id="para-quien"/);
+  assert.match(html, /No te sirve si/);
+  assert.match(html, /modelos de propósito general/);
+  assert.match(html, /id="comparativa"/);
+  assert.match(html, /angelortegacastro\.com/);
+  assert.match(html, /summumconsultoria\.es/);
+  assert.match(html, /legalpilot\.es/);
+  assert.match(html, /id="citar"/);
+  assert.match(html, /Actualizado el 20 de octubre de 2026/);
 });
 
 test('página: el calendario cita el Ómnibus y el 2 de diciembre de 2027', () => {
